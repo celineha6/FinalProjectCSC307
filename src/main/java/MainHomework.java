@@ -30,7 +30,7 @@ public class MainHomework extends JFrame {
 	}
 
 	public MainHomework() {
-		JPanel drawPanel = new DrawPanel();
+		drawPanel = new DrawPanel();
 		MouseNanny mouseNanny = new MouseNanny();
 		drawPanel.addMouseListener(mouseNanny);
 		Officer.setDrawPanel(drawPanel);
@@ -61,12 +61,14 @@ public class MainHomework extends JFrame {
 		add(File_explorer);
 		add(commit_history);
 
+
 		// Add action listeners
 		ActionNanny actionNanny = new ActionNanny();
 
 		Dependency.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				System.out.println("dependency graph clicked");
 				displayDependencyGraph();
 			}
 		});
@@ -88,7 +90,6 @@ public class MainHomework extends JFrame {
 		DependencyGraph generator = new DependencyGraph();
 		try {
 			mxGraphComponent graphComponent = generator.generateGraph("/Users/celineha/Downloads/FinalProj/DependencyGraph/src/main/java");
-			drawPanel.removeAll();
 			drawPanel.add(graphComponent, BorderLayout.CENTER);
 			drawPanel.revalidate();
 			drawPanel.repaint();
