@@ -17,16 +17,15 @@ import com.mxgraph.layout.mxCircleLayout;
  * Version: 3.0
  */
 public class MainHomework extends JFrame {
-	private JPanel drawPanel;
+	private static JPanel drawPanel;
+
 	public static void main(String[] args) {
 		MainHomework app = new MainHomework();
-		app.setSize(800, 600);
+		app.setSize(3024, 1964); //3024 × 1964
 		app.setTitle("Software Visualizer");
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		app.setResizable(false);
 		app.setVisible(true);
-		// Run the application
-		SwingUtilities.invokeLater(MainHomework::new);
 	}
 
 	public MainHomework() {
@@ -38,46 +37,11 @@ public class MainHomework extends JFrame {
 		JPanel toolPanel = new ToolPanel();
 		StatusPanel statusPanel = new StatusPanel();
 
-		// Get the undo and redo buttons from StatusPanel
-		JButton undoButton = statusPanel.getUndoButton();
-		JButton redoButton = statusPanel.getRedoButton();
+		// Create the ToolPanel
+		add(toolPanel, BorderLayout.WEST);
 
-		// Add ActionListener to the undo button
-		undoButton.addActionListener(e -> {
-			Color temp = Officer.getColor();
-			Officer.setColor(drawPanel.getBackground());
-			Officer.undoDrawAction(); // Undo the last drawing action
-			Officer.setColor(temp);
-		 // Repaint DrawPanel after undo
-		});
-		JTextField search = new JTextField("search code", 1);
-		JLabel Dependency = new JLabel("Dependency Graph");
-		JLabel File_explorer = new JLabel("File Explorer");
-		JLabel commit_history = new JLabel("Commit History");
-
-		setLayout(new GridLayout(7, 1));
-		add(search);
-		add(Dependency);
-		add(File_explorer);
-		add(commit_history);
-
-
-		// Add action listeners
-		ActionNanny actionNanny = new ActionNanny();
-
-		Dependency.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.out.println("dependency graph clicked");
-				displayDependencyGraph();
-			}
-		});
-
-		// Add ActionListener to the redo button
-		redoButton.addActionListener(e -> {
-			Officer.redoDrawAction(); // Redo the last undone action
-		// Repaint DrawPanel after redo
-		});
+		// Set the frame visible
+		setVisible(true);
 
 		setLayout(new BorderLayout());
 		add(toolPanel, BorderLayout.WEST);
@@ -86,15 +50,26 @@ public class MainHomework extends JFrame {
 	}
 
 
-	private void displayDependencyGraph() {
+	public static void displayDependencyGraph() {
+		System.out.println("displayDependencyGraph method called");
 		DependencyGraph generator = new DependencyGraph();
 		try {
 			mxGraphComponent graphComponent = generator.generateGraph("/Users/celineha/Downloads/FinalProj/DependencyGraph/src/main/java");
+
+			System.out.println("Graph generated successfully");
+			drawPanel.removeAll();
+
 			drawPanel.add(graphComponent, BorderLayout.CENTER);
+
+
 			drawPanel.revalidate();
+
 			drawPanel.repaint();
-		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Graph added to central panel");
+
+		}
+			catch (IOException e) {
+				e.printStackTrace();
 		}
 	}
 }

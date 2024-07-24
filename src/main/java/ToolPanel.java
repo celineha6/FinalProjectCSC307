@@ -1,4 +1,6 @@
 
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
  * @version 2.0
  */
 public class ToolPanel extends JPanel {
-	
+
 	public ToolPanel() {
 
 		JTextField search = new JTextField("search code", 1);
@@ -54,10 +56,12 @@ public class ToolPanel extends JPanel {
 
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					System.out.println("Dependency graph clicked");
+					MainHomework.displayDependencyGraph();
 					label.setForeground(clickColor);
 				}
 			});
 		}
 	}
-	
+
 }
