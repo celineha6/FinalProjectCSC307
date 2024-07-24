@@ -21,11 +21,8 @@ import javax.swing.*;
 
 public class DependencyGraph {
 
-    public static void main(String[] args) throws IOException
+    public mxGraphComponent generateGraph(String directoryPath) throws IOException
     {
-
-        // path of the specific directory
-        String directoryPath = "..";
 
         // create a Path object for the specified directory
         Path directory = Paths.get(directoryPath);
@@ -82,23 +79,7 @@ public class DependencyGraph {
         // Create a graph component
         mxGraphComponent graphComponent = new mxGraphComponent(graphAdapter);
 
-        // Adjust the size of the frame
-        JFrame frame = new JFrame();
-        frame.getContentPane().add(graphComponent);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(3024, 1964); // Set a desired size for the frame
-
-        // Calculate the scale needed to fit the graph within the frame
-        Dimension graphSize = graphComponent.getGraphControl().getPreferredSize();
-        Dimension frameSize = frame.getSize();
-        double widthScale = frameSize.getWidth() / graphSize.getWidth();
-        double heightScale = frameSize.getHeight() / graphSize.getHeight();
-        double scale = Math.min(widthScale, heightScale);
-
-        // Apply the scale to the graph component
-        graphComponent.zoomTo(scale, true);
-
-        frame.setVisible(true);
+        return graphComponent;
 
     }
 }

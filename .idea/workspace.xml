@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4961c935-7324-4c02-ae7b-bb2f4314c2b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ActionNanny.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DrawPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainHomework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseNanny.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Officer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DependencyGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DependencyGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainHomework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainHomework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToolPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToolPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721707148452</updated>
-      <workItem from="1721707149812" duration="9818000" />
+      <workItem from="1721707149812" duration="11438000" />
     </task>
     <servers />
   </component>

@@ -7,10 +7,8 @@ import java.sql.Array;
 import java.util.ArrayList;
 
 /**
- * ToolPanel creates a panel with a color menu and three radio buttons.
- * This version adds an ActionListener to the color menu and the radio buttons.
- *
- * @author javiergs
+ * ToolPanel creates a panel with the features and an upload button
+ * @author Celine Ha
  * @version 2.0
  */
 public class ToolPanel extends JPanel {
@@ -27,13 +25,16 @@ public class ToolPanel extends JPanel {
 		add(Dependency);
 		add(File_explorer);
 		add(commit_history);
+
 		ActionNanny actionNanny = new ActionNanny();
 		search.addActionListener(actionNanny);
+
 
 		ArrayList<JLabel> labels = new ArrayList<>();
 		labels.add(Dependency);
 		labels.add(File_explorer);
 		labels.add(commit_history);
+
 
 		for (JLabel label : labels) {
 			label.addMouseListener(new MouseAdapter() {
