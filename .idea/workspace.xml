@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4961c935-7324-4c02-ae7b-bb2f4314c2b1" name="Changes" comment="" />
+    <list default="true" id="4961c935-7324-4c02-ae7b-bb2f4314c2b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActionNanny.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DependencyGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DrawPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainHomework.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MouseNanny.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Officer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StatusPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToolPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +35,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2jdBbsyl7fqBnfYaPj7UJKe6NDI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
